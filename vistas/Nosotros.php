@@ -22,19 +22,24 @@
         <br>
         <br>
         <br>
-        <div class="contairner">
+        <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-3">
                     <img src="" alt="">
                 </div>
 
-            <div class="row">
-                    <p class="fs-2" style="color:#0000ff;"> Entrenador</p>
-                    <p class="fs-3" style="color:#38A0FC;"> Arturo Coronado</p>
-                
+            <div class="col-3">
+                    <p class="fs-4" style="color:#0000ff;"> Entrenador</p>
+                    <p class="fs-5" style="color:#38A0FC;"> Arturo Coronado</p>
+             
+            </div>  
 
+            <div class="col-3">
+            <p class="fs-4" style="color:#0000ff;"> Descripcion</p>
+               
 
-            </div>    
+            </div>
+
             </div>
 
 

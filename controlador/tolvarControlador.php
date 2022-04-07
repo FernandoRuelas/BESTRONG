@@ -17,6 +17,9 @@ class tolvarControlador{
 
                     include ("vistas/".$_GET["accion"].".php");
                  }
+                 elseif ($_GET["accion"]== "RegistroControlador") {
+                    include("controlador/RegistroControlador.php");
+                }
 
                
             }
