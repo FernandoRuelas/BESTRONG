@@ -25,11 +25,11 @@ class tolvarNav{
 
               <?php if($_GET["accion"]=="Inicio"):?>
                 <li class="nav-item">
-                  <a class="nav-link active" href="index.php?accion=Inicio">Inicio</a>
+                  <a class="nav-link active" href="index.php?accion=inicio">Inicio</a>
                 </li>
               <?php else:?>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?accion=Inicio">Inicio</a>
+                <a class="nav-link" href="index.php?accion=inicio">Inicio</a>
                 </li>
               <?php endif?>
 
@@ -70,7 +70,7 @@ class tolvarNav{
 
     <?php }else{?>
       <li class="nav-item">
-        <a class="nav-link active" href="index.php?accion=Inicio">Inicio</a>
+        <a class="nav-link active" href="index.php?accion=inicio">Inicio</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="index.php?accion=Nosotros">Nosotros</a>
@@ -118,24 +118,15 @@ class tolvarNav{
 
               <?php if($_GET["accion"]=="Inicio"):?>
                 <li class="nav-item">
-                  <a class="nav-link active" href="index.php?accion=InicioLogueado">Inicio</a>
+                  <a class="nav-link active" href="index.php?accion=inicioLogueado">Inicio</a>
                 </li>
               <?php else:?>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?accion=InicioLogueado">Inicio</a>
+                <a class="nav-link" href="index.php?accion=inicioLogueado">Inicio</a>
                 </li>
               <?php endif?>
 
-              <?php if($_GET["accion"]=="Nosotros"):?>
-              <li class="nav-item">
-                <a class="nav-link active" href="index.php?accion=Nosotros">Nosotros</a>
-              </li>
-              <?php else:?>
-                <li class="nav-item">
-                <a class="nav-link" href="index.php?accion=Nosotros">Nosotros</a>
-                </li>
-              <?php endif?>
-
+          
 
 
               <?php if($_GET["accion"]=="Perfil"):?>
@@ -151,11 +142,11 @@ class tolvarNav{
 
               <?php if($_GET["accion"]=="Formulario"):?>
               <li class="nav-item">
-                <a class="nav-link active" href="index.php?accion=Formulario">Forulario</a>
+                <a class="nav-link active" href="index.php?accion=Formulario">Formulario</a>
               </li>
               <?php else:?>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?accion=Forulario">Formulario</a>
+                <a class="nav-link" href="index.php?accion=Formulario">Formulario</a>
                 </li>
               <?php endif?>
 
@@ -176,10 +167,7 @@ class tolvarNav{
 
     <?php }else{?>
       <li class="nav-item">
-        <a class="nav-link active" href="index.php?accion=InicioLogueado">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="index.php?accion=Nosotros">Nosotros</a>
+        <a class="nav-link active" href="index.php?accion=inicioLogueado">Inicio</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="index.php?accion=Perfil">Perfil</a>

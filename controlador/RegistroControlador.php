@@ -46,12 +46,13 @@
             
             //Hacemos la insercion de datos en la BD
             
-                $queryInsertUsuario = sprintf("INSERT INTO Usuario (nombre, contraseña, correo, telefono, tipoUser) VALUES ('%s', '%s', '%s', '%s', '%s')",
+                $queryInsertUsuario = sprintf("INSERT INTO Usuario (nombre, contraseña, correo, telefono, tipoUser, estado) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')",
                 mysqli_real_escape_string($connLocalhost, trim($_POST['nombreRegistro'])),
                 mysqli_real_escape_string($connLocalhost, trim($_POST['contraseña2Registro'])),
                 mysqli_real_escape_string($connLocalhost, trim($_POST['correoRegistro'])),
                 mysqli_real_escape_string($connLocalhost, trim($_POST['telefonoRegistro'])),
-                ("cliente")
+                ("cliente"),
+                ("inactivo")
                 );
             
                 mysqli_query($connLocalhost, $queryInsertUsuario) or trigger_error("La inserción del registro del usuario ha fallado");

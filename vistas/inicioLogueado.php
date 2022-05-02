@@ -20,7 +20,7 @@
        
 </head>
 
-<body>
+<body >
 
 <?php    
 
@@ -36,7 +36,7 @@ $navegacion->NavegacionUsuarioLogeado();
 
      <div class="m-0 row justify-content-center">
 
-        <div class="col-9 bg-primary text-center">
+        <div class="col-9 text-center" style="background-color: #e3f2fd;">
             Aqui aparecera lo que publique el administrador como horarios, faltas, progresos,fotos, ventas, promociones,etc.
 
 

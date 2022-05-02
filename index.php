@@ -13,7 +13,7 @@ if(isset($_GET["accion"])){
 }else{
 
     
-include("vistas/inicio.php");
+include("vistas/Nosotros.php");
 }
 
 ?>

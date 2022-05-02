@@ -37,21 +37,41 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="..." width="500" height="500">
+      <div class="row">
+        <div class="col-4">
+        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
+
+        </div>
+
+        <div class="col-4">
+        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
+
+        </div>
+        <div class="col-3">
+        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
       <div class="carousel-caption d-none d-md-block">
         <h5>Somos un grupo de entrenadores capasitados y con mucha experiencia.</h5>
-        <p>Te ayudaremos a conoser tu mejejor vercion.</p>
-        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Nosotros">Conosenos</a></p>
+        <p >Te ayudaremos a conoser tu mejejor vercion.</p>
+        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Entrar">Conosenos</a></p>
+      </div>
+
+        </div>
+
+      </div>
+      
+    
+    </div>
+
+    <div class="carousel-item ">
+      <img src="imagenes/entrar.PNG" class="d-block w-100" alt="..." width="500" height="500">
+      <div class="carousel-caption d-none d-md-block">
+        <br>
+        <h5 style="color: black;">Disfruta de grandes beneficios</h5>
+        <p style="color: black;">Realiza tu pago en linea y goza de todos los servicios que tenemos para ti</p>
+        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Registrate">IniciarSesion</a></p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="..." width="500" height="500">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Unete y consigue veneficios unicos.</h5>
-        <p>contacto directo con tu entrenador.</p>
-        <p>seccion de dudas.</p>
-        <p>pagos en linea.</p>
-      </div>
+    
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -67,10 +87,14 @@
 
     <?php    
 
-      require("herramientas/tolavar.php");
-      $navegacion= new tolvarNav();
-      $navegacion->Navegacion();
+      
+        require("herramientas/tolavar.php");
+        $navegacion= new tolvarNav();
+        $navegacion->Navegacion();
+  
+      
 
+  
         
 
      
@@ -97,6 +121,8 @@
             <div class="col " >
                 <p class="fs-2" style="color:#0000ff;"> Nuestro Objetivo</p>
                 <p class="fs-3" style="color:#38A0FC;"> Nuestro objetivo es poder ayudarte a construir el fisico que deseas, ayudandote con la mejor atencion, adaptando un plan a tus nesesidades y tu comodidad.</p>
+               
+                
 
             </div>
             
@@ -107,6 +133,8 @@
 
         </div>
     </div>
+   
+   
 
     <br>
     <br>

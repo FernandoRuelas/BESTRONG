@@ -30,16 +30,16 @@ require("herramientas/tolavar.php");
     
 <main class="form-signin">
   <div class="container col-3">
-  <form action="#" method="POST">
+  <form action="index.php?accion=EntrarControlador" method="POST">
     <img class="mb-4" src="imagenes/BESTRONG.jpeg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Porfavor inicia secion</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="flotanteCorreo" placeholder="name@example.com">
+      <input type="email" class="form-control" id="flotanteCorreo" name="correoEntrar" placeholder="name@example.com">
       <label for="floatingInput">Correo</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="flotanteContraseña" placeholder="Password">
+      <input type="password" class="form-control" id="flotanteContraseña" name="contraseñaEntrar" placeholder="Password">
       <label for="floatingPassword">Contraseña</label>
     </div>
 
@@ -48,7 +48,7 @@ require("herramientas/tolavar.php");
         <input type="checkbox" value="remember-me"> Recuerdame
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" name="Entrar">Entrar</button>
+    <input class="btn btn-lg btn-primary" type="submit" value="Entrar" name="Entrar">
     <p class="mt-5 mb-3 text-muted">&copy; Bestrong</p>
   </form>
   </div>
