@@ -48,7 +48,7 @@ require("herramientas/tolavar.php");
         <input type="checkbox" value="remember-me"> Recuerdame
       </label>
     </div>
-    <input class="btn btn-lg btn-primary" type="submit" value="Entrar" name="Entrar">
+    <input class="btn btn-lg btn-primary"  type="submit" value="Entrar" name="Entrar">
     <p class="mt-5 mb-3 text-muted">&copy; Bestrong</p>
   </form>
   </div>

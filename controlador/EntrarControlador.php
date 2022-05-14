@@ -24,7 +24,7 @@
         
 
        // Armamos el query para verificar el email y el password en la BD
-        $queryLogin = sprintf("SELECT idUsuario, nombre, correo, estado, tipoUsuario, pago FROM Usuario WHERE correo = '%s' AND contraseña = '%s'",
+        $queryLogin = sprintf("SELECT idUsuario, nombre, correo, estado, tipoUser, pago FROM Usuario WHERE correo = '%s' AND contraseña = '%s'",
           mysqli_real_escape_string($connLocalhost, trim($_POST['correoEntrar'])),
           mysqli_real_escape_string($connLocalhost, trim($_POST['contraseñaEntrar']))
      
@@ -44,15 +44,21 @@
 
           // Definimos variables de sesion en $_SESSION
               $_SESSION['userId'] = $userData['idUsuario'];
-              $_SESSION['userRol'] = $userData['tipoUsuario'];
+              $_SESSION['userRol'] = $userData['tipoUser'];
               $_SESSION['userNombre'] = $userData['nombre'];
               $_SESSION['userEstado'] = $userData['estado'];
               $_SESSION['userCorreo'] = $userData['correo'];
               $_SESSION['userPago']=$userData['pago'];
-            
-    
+
+          
+          if ( $userData['tipoUser']=="admin") {
+            header("location: index.php?accion=perfilAdmi");
+          }
+       
+
           // Redireccionamos al usuario al panel de control
-          if ( $userData['estado']=="activo") {
+          elseif ( $userData['estado']=="activo") {
+
 
                 $id=$_SESSION['userId'];
                   
@@ -68,6 +74,7 @@
                  $a=$idFormulario['idFo'];
 
                  if (empty($a)) {
+                   
                   header("location: index.php?accion=Formulario");
                  }
                

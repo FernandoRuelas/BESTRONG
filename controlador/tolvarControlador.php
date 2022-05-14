@@ -30,18 +30,28 @@ class tolvarControlador{
                 }
                
                 elseif ($_GET["accion"]=="inicioLogueado"||
-                        $_GET["accion"]=="PerfilUsuario"||
-                        $_GET["accion"]=="Formulario" ){
+                        $_GET["accion"]=="PerfilUsuario" ){
 
-                            if (isset($_SESSION["userId"])) {
-                            include ("vistas/".$_GET["accion"].".php");
-                                }
+                            if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="cliente") {
+                               
+                                include ("vistas/".$_GET["accion"].".php");
+                                
+                            }
                 }
                 elseif ($_GET["accion"]=="FormularioControlador"||
                         $_GET["accion"]=="pagoControlador") {
-                    if (isset($_SESSION["userId"])) {
+                    if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="cliente") {
+                        
                         include ("controlador/".$_GET["accion"].".php");
+                        
                     }
+                }
+                elseif ($_GET["accion"]=="inicioAdmi"||
+                        $_GET["accion"]=="perfilAdmi" ||
+                        $_GET["accion"]=="mostrarPerfil" ) {
+                            if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="admin") {
+                        include ("vistas/".$_GET["accion"].".php");
+                            }
                 }
                
             }

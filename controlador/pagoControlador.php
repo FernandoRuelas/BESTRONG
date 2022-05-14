@@ -29,5 +29,5 @@
               //acer insersion en la bd donde dira que el estado del usuario es activo
               //hacer insercion en la tabla pagos donde insertaremos la fecha en la que se realizo el pago
             $_SESSION['userEstado']="activo";
-            header("location: index.php?accion=Formulario");
+            header("location: index.php?accion=PerfilUsuario");
            ?>

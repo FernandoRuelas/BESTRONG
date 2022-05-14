@@ -18,32 +18,14 @@
 
 
 <body>
-    <?php    
 
-    require("herramientas/tolavar.php");
-    $navegacion= new tolvarNav();
-    $navegacion->NavegacionUsuarioLogeado();
-
-
-
-    ?>
-    <br>
-    <?php 
-
-    if(!isset($_SESSION['userNombre'])) {
-        session_start();
-    }
-
-
-    ?>
-    <br>
   
     
     <div class="row">
 
         <div class="col-3">
 
-            <h1 class="fs-2" style="color:#0000ff;">Bienvenido <?php if (isset($_SESSION['userId'])) {echo $_SESSION['userNombre'];} ?></h1>
+            <h1 class="fs-2" style="color:#0000ff;">Bienvenido <?php if (isset($_POST['idVerFotos'])) {echo $_POST['idVerFotos'];} ?></h1>
              
         </div>
 
@@ -53,73 +35,13 @@
     <br>
     <br>
 
-    <div class="row"> 
-        <div class="col-5" >
-                
-            
-            <button name="formulario" class="btn-primary "  data-bs-toggle="modal" data-bs-target="#modalFormulario">
-                <h4>Pulsa aqui para llenar tu formulario del mes. Asi tu entrenador podra encargarse de tu plan</h4>
-            </button>
-            
-        </div>
-        <div class="col-1">
-
-        </div>
-
-        <div class="col-5">
-
-            <h1>Plan del mes</h1>
-            <input type="submit" name="obtenerPlan" class="btn-primary" value="Actualizar" src="index.php?=PerfilUsuario">
-            <?php 
-             // include("coneccion/db_bestrong.php");
-           // $a=$_SESSION["userId"];
-               //hacemos consulta para obtener la fecha
-               //$querySelectPlan = "SELECT * FROM copiaPlanes WHERE idUsuario = $a" ;
-
-               //ejecutamos el query
-              // $resQueryPlan = mysqli_query($connLocalhost, $querySelectPlan) or trigger_error("Algun dato es incorrecto");
-            
-            ?>
-             <?php 
-
-             
-            // if (empty($resQueryPlan)) {
-            //     echo "Su plan aun no esta disponible";
-            // }else {
-                 
-             
-             
-            // while ($fila = mysqli_fetch_array($resQueryPlan, MYSQLI_BOTH)) {?>
-                          <tr>
-
-                            
-                            <td><?php //echo $fila['fecha']?></td>
-                            <td><?php //echo  $fila['descripcion']?></td>
-                            <td><?php //echo $fila['media']?></td>
-                            <td><?php //echo $fila['media2']?></td>
-                        
-
-                            </tr>
-
-                
-             <?php // }}?>
-                            <br>
-                            <br>
-                    
-                        </tbody>
-
-      
-                    
-            
-        </div>
-
-    </div>
+   
 
 
 
     <?php 
     include("coneccion/db_bestrong.php");
-    $id=$_SESSION['userId'];
+    $id=$_POST['idVerFotos'];
 
     ?>
     <br>
@@ -154,7 +76,7 @@
                         <tr>
                         
                     
-                        <td><h3><?php echo $fila["fecha"]?></h3 > <src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente']);?>"></td>
+                        <td><h3><?php echo $fila["fecha"]?></h3 > <src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente']; ?>"></td>
                         <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoEspaldas']);?>"></td>
                         <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilUno']);?>"></td>
                         <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilDos']);?>"></td>

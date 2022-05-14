@@ -11,6 +11,9 @@
 </head>
 <body>
 
+<div class="m-0 container-center">
+    <div class=" justify-content-center">
+
     <div id="paypal-button-container"></div>
     <script>
         paypal.Buttons({
@@ -49,8 +52,9 @@
             }
         }).render ('#paypal-button-container');
     </script>
-
-
+    </div>
+</div>
     
 </body>
+
 </html>
