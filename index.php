@@ -13,12 +13,14 @@ if(isset($_GET["accion"])){
     require_once("controlador/tolvarControlador.php");
     $cambioDePaginas= new tolvarControlador();
     $cambioDePaginas->cambioPaguinas();
-    if ($_GET["accion"]=="PerfilUsuario" && isset($_SESSION["userId"])) {
+    if ($_GET["accion"]=="PerfilUsuario" && isset($_SESSION["userId"])  && $_SESSION["userRol"]=="cliente") {
        
         require_once("herramientas/ModalFormulario.php");
         $modal= new modales();
         $modal->modalFormulario();
-    }elseif ($_GET["accion"]=="perfilAdmi" && isset($_SESSION["userId"])) {
+    }
+    
+    if ($_GET["accion"]=="perfilAdmi" && isset($_SESSION["userId"]) && $_SESSION["userRol"]=="admin") {
         require_once("herramientas/ModalFormulario.php");
         $modal= new modales();
         $modal->modalMostrar();

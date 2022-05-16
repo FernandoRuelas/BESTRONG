@@ -50,8 +50,14 @@ class tolvarControlador{
                         $_GET["accion"]=="perfilAdmi" ||
                         $_GET["accion"]=="mostrarPerfil" ) {
                             if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="admin") {
-                        include ("vistas/".$_GET["accion"].".php");
+                                 include ("vistas/".$_GET["accion"].".php");
                             }
+                }
+                elseif ($_GET["accion"]=="inicioAdmiControlador"||
+                         $_GET["accion"]=="subirPlanControlador") {
+                            if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="admin") {
+                                include ("controlador/".$_GET["accion"].".php");
+                                    }
                 }
                
             }

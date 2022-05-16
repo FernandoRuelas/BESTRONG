@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" cal-scale=1.0">
+    <meta name="viewport" cal-scale="1.0">
     <title>Document</title>
 
         <!-- ********************************
@@ -20,12 +20,30 @@
 <body>
 
   
-    
+   <div class="container col-12">
     <div class="row">
 
         <div class="col-3">
+            <?php 
 
-            <h1 class="fs-2" style="color:#0000ff;">Bienvenido <?php if (isset($_POST['idVerFotos'])) {echo $_POST['idVerFotos'];} ?></h1>
+                include("coneccion/db_bestrong.php");
+                $id=$_POST['verFotos'];
+
+                $queryUsuario="SELECT * FROM Usuario WHERE idUsuario = $id";
+               
+
+
+                $resQueryUsuario=mysqli_query($connLocalhost, $queryUsuario) or trigger_error("Algun dato es incorrecto");
+
+                $nombre=mysqli_fetch_assoc($resQueryUsuario);
+                $nombre1=$nombre["nombre"];
+            
+            ?>
+
+            <br>
+            <br>
+
+            <h1 class="fs-2" style="color:#0000ff;"><?php if (isset($_POST['idVerFotos'])) {echo $nombre1;} ?></h1>
              
         </div>
 
@@ -40,13 +58,11 @@
 
 
     <?php 
-    include("coneccion/db_bestrong.php");
-    $id=$_POST['idVerFotos'];
+   
 
     ?>
-    <br>
-    <br>
-    <br>
+
+   
 
     
 
@@ -76,10 +92,10 @@
                         <tr>
                         
                     
-                        <td><h3><?php echo $fila["fecha"]?></h3 > <src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente']; ?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoEspaldas']);?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilUno']);?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilDos']);?>"></td>
+                        <td><h3><?php echo $fila["fecha"]?></h3 > <img width="250px" height="250px" src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente']);?>"></td>
+                        <td><br><br><img width="250px" height="250px" src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoEspaldas']);?>"></td>
+                        <td><br><br><img width="250px" height="250px" src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilUno']);?>"></td>
+                        <td><br><br><img width="250px" height="250px" src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilDos']);?>"></td>
 
                         </tr>
                         <?php }?>
@@ -103,7 +119,7 @@
 
 
 
-
+</div> 
     
  <!-- ********************************
 ****** Scrips de boostrap************

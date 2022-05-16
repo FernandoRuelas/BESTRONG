@@ -139,6 +139,17 @@ class tolvarNav{
                 </li>
               <?php endif?>
 
+
+              <?php if($_GET["accion"]=="CerrarSesion"):?>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.php?accion=Salir">Salir</a>
+              </li>
+              <?php else:?>
+                <li class="nav-item">
+                <a class="nav-link" href="index.php?accion=Salir">Salir</a>
+                </li>
+              <?php endif?>
+
               <!--
               <?php if($_GET["accion"]=="Formulario"):?>
               <li class="nav-item">
@@ -173,6 +184,9 @@ class tolvarNav{
       <li class="nav-item">
         <a class="nav-link" href="index.php?accion=Perfil">Perfil</a>
       </li>
+      <li class="nav-item">
+                <a class="nav-link" href="index.php?accion=Salir">Salir</a>
+        </li>
       <!--
       <li class="nav-item">
         <a class="nav-link" href="index.php?accion=Formulario">Formulario</a>
@@ -247,20 +261,33 @@ class tolvarNav{
                 </li>
               <?php endif?>
 
-
-
-              <li class="nav-item dropdown">
-                  <a class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ejercicios
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+              <?php if($_GET["accion"]=="Ejercicios"):?>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.php?accion=Ejercicios">Ejercicios</a>
               </li>
+              <?php else:?>
+                <li class="nav-item">
+                <a class="nav-link" href="index.php?accion=Ejercicios">Ejercicios</a>
+                </li>
+              <?php endif?>
 
+
+
+              <ul class="nav justify-content-end">
+              <?php if($_GET["accion"]=="salir"):?>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.php?accion=salir">Salir</a>
+              </li>
+              <?php else:?>
+                <li class="nav-item">
+                <a class="nav-link" href="index.php?accion=salir">Salir</a>
+                </li>
+              <?php endif?>
+              </ul>
+
+
+
+         
 
     <?php }else{?>
       <li class="nav-item">
@@ -269,22 +296,18 @@ class tolvarNav{
       <li class="nav-item">
         <a class="nav-link active" href="index.php?accion=perfilAdmi">Perfil</a>
       </li>
-     
-     
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-            Ejercicios
-          </a>
-          <ul class="dropdown-menu" >
-            <li><a class="dropdown-item" href="#">Pecho</a></li>
-            <li><a class="dropdown-item" href="#">Pierna</a></li>
-            <li><a class="dropdown-item" href="#">Espalda</a></li>
-            <li><a class="dropdown-item" href="#">Biseps</a></li>
-            <li><a class="dropdown-item" href="#">Triseps</a></li>
-            <li><a class="dropdown-item" href="#">Hombros</a></li>
-          </ul>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="index.php?accion=salir">Salir</a>
+      </li>
+      
+      <div class="d-flex">
+      <li class="nav-item">
+                <a class="nav-link" href="index.php?accion=Ejercicios">Ejercicios</a>
+      </li>
     
+    </div>
+     
+
 
       <?php }?>
 

@@ -162,39 +162,6 @@
                                 $datos=mysqli_fetch_assoc($resQueryUsuario);
                                 $nombre=$datos["nombre"];
                                 $telefono=$datos["telefono"];
-
-  
-
-                                // Armamos el query 
-                                $queryForm= "SELECT * FROM copiaFormulario WHERE idUsuario2 = $id ";
-
-                                // Ejecutamos el query
-                                $resQueryForm = mysqli_query($connLocalhost, $queryForm) or trigger_error("Algun dato es incorrecto");
-
-                                $datos= mysqli_fetch_assoc($resQueryForm);  
-                                
-                                $datosForm= $datos["fecha2"]."||".
-                                $datos["objetivo2"]."||".
-                                $datos["estatura2"]."||".
-                                $datos["peso2"]."||".
-                                $datos["actividades2"]."||".
-                                $datos["alergias2"]."||".
-                                $datos["edad2"]."||".
-                                $datos["horaDormir2"]."||".
-                                $datos["horaDespertar2"]."||".
-                                $datos["lesiones2"]."||".
-                                $datos["enfermedades2"]."||".
-                                $datos["locacionEntreno"]."||".
-                             
-                                $datos["comentario"]."||".
-                                $datos["horaEntreno"];
-
-                                
-                               
-
-                                
-                                                                                                            
-
                             ?>
                             
                             

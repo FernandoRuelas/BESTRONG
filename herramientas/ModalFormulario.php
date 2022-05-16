@@ -210,6 +210,23 @@ class modales{
               <div  class="m-0 row justify-content-center">
                   
                   <div style="background-color: #e3f2fd;" class=" col-9 m-0 row justify-content-center">
+
+                  <form action="index.php?accion=mostrarPerfil" method="POST">
+                              
+                              
+                        
+                              <label for="text">Cliente: </label>  <input id="idVerFotos" name="verFotos" readonly disabled type="text"   > <input id="nombre" disabled type="text" readonly>
+                              
+                            
+                            
+                              
+                              <input class="btn btn-lg btn-primary"  type="submit" value="Ver Fotos" name="VerFotos">
+
+                            
+                            </form>
+                  
+
+                    
                       
                       <label class="form-label fs-4">Objetivo</label>
                       <textarea  id="objetivo" class="form-control" readonly disabled name="objetivo" rows="5"></textarea>
@@ -311,24 +328,12 @@ class modales{
                       <br>
                       <div>
                           <br>
+
+
+
+                  
                         
-                          <div class="container col-3">
-                            <form action="index.php?accion=mostrarPerfil" method="POST">
-                              
-                              <h1 class="h3 mb-3 fw-normal">Ingresa El Id del usuario</h1>
-
-                              
-                                <label for="text">Para ver sus fotos ingresa su Id</label>
-                                <input type="number" class="form-control"  name="idVerFotos" >
-                              
-                            
-                            
-                              
-                              <input class="btn btn-lg btn-primary"  type="submit" value="Ver" name="VerFotos">
-
-                            
-                            </form>
-                          </div>
+                
 
 
                         
@@ -348,10 +353,7 @@ class modales{
 
 
 
-                      <form action="index.php?accion=subirPlanControlador" method="POST">
-                             <input type="file" name="archivo" required /><br>
-                              <input class="btn btn-lg btn-primary"  type="submit" value="Subir Archivo" name="btnArchivo">
-                       </form>
+                    
 
                   </div>
 

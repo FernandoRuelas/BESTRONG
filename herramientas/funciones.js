@@ -43,7 +43,9 @@ success:function(response){
     $('#locacionEntreno').val(response.locacionEntreno);
     $('#comentario').val(response.comentario);
     $('#horaEntreno').val(response.horaEntreno);
-    $('#situacionGym').val(response.situacionGym)
+    $('#situacionGym').val(response.situacionGym);
+    $('#idVerFotos').val(response.idUsuario);
+    $('#nombre').val(response.nombre)
     
     //$('#imagen1').html("<img src=\""+ dataimage/jpeg, base64,base64_encode(response.imagen1) +"\" />");
     //document.getElementById()

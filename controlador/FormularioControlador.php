@@ -29,8 +29,8 @@ if (isset($_POST['EnviarFormulario'])) {
 
         // Ejecutamos el query
           $resQuerySelectId = mysqli_query($connLocalhost, $querySelectId) or trigger_error("Algun dato es incorrecto");
-
-        if ($resQuerySelectId == "null") {
+          
+        if ($resQuerySelectId) {
               //obtenemos el id
            $idFormulario= mysqli_fetch_assoc($resQuerySelectId);
            $a=$idFormulario['idFo'];
@@ -49,16 +49,12 @@ if (isset($_POST['EnviarFormulario'])) {
            $diferencia = date_diff($fechaPago1,$fecha1);
 
            $tiempo=array();
-
+           
            foreach ($diferencia as $valor) {
              $tiempo[]=$valor;
            }
          
-    
-      
-       
            if ($tiempo[1]>=1) {
-
           
             //obtenemos imagenes
             $fotoFrente = $_FILES['fotoFrente']['tmp_name'];
@@ -144,7 +140,6 @@ if (isset($_POST['EnviarFormulario'])) {
                     ';
                     
             }
-
 
         }else {
 

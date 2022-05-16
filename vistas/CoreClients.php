@@ -9,6 +9,18 @@
         //incluimos la BD
        include("../coneccion/db_bestrong.php");
 
+       // Armamos el query 
+       $queryU= "SELECT * FROM Usuario WHERE idUsuario = $id";
+
+       // Ejecutamos el query
+       $resQueryU = mysqli_query($connLocalhost, $queryU) or trigger_error("Algun dato es incorrecto");
+
+      $usuario= mysqli_fetch_assoc($resQueryU); 
+
+      $nombre= $usuario["nombre"];
+
+
+
         // Armamos el query 
         $queryForm= "SELECT * FROM copiaFormulario WHERE idUsuario2 = $id";
 
@@ -38,7 +50,8 @@
                     "comentario" =>  $datos["comentario"],
                     "horaEntreno" =>$datos["horaEntreno"],
                     "situacionGym" => $datos["situacionGym"],
-                    
+                    "idUsuario" => $id,
+                    "nombre" =>  $nombre
                 );
 
                 

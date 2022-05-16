@@ -57,7 +57,7 @@
         <div class="col-5" >
                 
             
-            <button name="formulario" class="btn-primary "  data-bs-toggle="modal" data-bs-target="#modalFormulario">
+            <button name="formulario" class="btn btn-block btn-primary "  data-bs-toggle="modal" data-bs-target="#modalFormulario">
                 <h4>Pulsa aqui para llenar tu formulario del mes. Asi tu entrenador podra encargarse de tu plan</h4>
             </button>
             
@@ -69,7 +69,7 @@
         <div class="col-5">
 
             <h1>Plan del mes</h1>
-            <input type="submit" name="obtenerPlan" class="btn-primary" value="Actualizar" src="index.php?=PerfilUsuario">
+            <input type="submit" name="obtenerPlan" class="btn btn-block btn-secondary" value="Actualizar" src="index.php?=PerfilUsuario">
             <?php 
              // include("coneccion/db_bestrong.php");
            // $a=$_SESSION["userId"];
@@ -154,10 +154,10 @@
                         <tr>
                         
                     
-                        <td><h3><?php echo $fila["fecha"]?></h3 > <src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente']);?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoEspaldas']);?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilUno']);?>"></td>
-                        <td><br><br><src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoPerfilDos']);?>"></td>
+                        <td><h3><?php echo $fila["fecha"]?></h3 > <img  width="250px" height="250px" src="data:image/jpg;base64,<?php echo base64_encode($fila['fotoFrente'])?>"></td>
+                        <td><br><br><img  width="250px" height="250px" src="data:image/jpg;base64,<?=base64_encode($fila['fotoEspaldas'])?>"></td>
+                        <td><br><br><img  width="250px" height="250px" src="data:image/jpg;base64,<?=base64_encode($fila['fotoPerfilUno'])?>"></td>
+                        <td><br><br><img  width="250px" height="250px" src="data:image/jpg;base64,<?=base64_encode($fila['fotoPerfilDos'])?>"></td>
 
                         </tr>
                         <?php }?>
