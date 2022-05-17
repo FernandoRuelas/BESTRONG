@@ -58,6 +58,11 @@ class tolvarControlador{
                             if (isset($_SESSION["userId"]) && $_SESSION["userRol"]=="admin") {
                                 include ("controlador/".$_GET["accion"].".php");
                                     }
+                }elseif ($_GET["accion"]=="Salir") {
+                    if (isset($_SESSION["userId"])) {
+                        include ("controlador/".$_GET["accion"].".php");
+                    }
+                    
                 }
                
             }

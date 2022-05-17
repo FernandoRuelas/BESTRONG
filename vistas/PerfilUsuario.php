@@ -68,41 +68,71 @@
 
         <div class="col-5">
 
-            <h1>Plan del mes</h1>
+            <h1>Plan del mes</h1> 
             <input type="submit" name="obtenerPlan" class="btn btn-block btn-secondary" value="Actualizar" src="index.php?=PerfilUsuario">
+            <br>
+
             <?php 
-             // include("coneccion/db_bestrong.php");
-           // $a=$_SESSION["userId"];
+              include("coneccion/db_bestrong.php");
+            $a=$_SESSION["userId"];
                //hacemos consulta para obtener la fecha
-               //$querySelectPlan = "SELECT * FROM copiaPlanes WHERE idUsuario = $a" ;
+               $querySelectPlan = "SELECT MAX(idPlanes) AS idPlanes FROM Planes WHERE idUsuarios = $a" ;
 
                //ejecutamos el query
-              // $resQueryPlan = mysqli_query($connLocalhost, $querySelectPlan) or trigger_error("Algun dato es incorrecto");
+               $resQueryPlan = mysqli_query($connLocalhost, $querySelectPlan) or trigger_error("Algun dato es incorrecto");
+
+
             
             ?>
              <?php 
 
              
-            // if (empty($resQueryPlan)) {
-            //     echo "Su plan aun no esta disponible";
-            // }else {
-                 
+             if (empty($resQueryPlan)) {
+                 echo "Su plan aun no esta disponible";
+             }else {
+
+                $datos= mysqli_fetch_assoc($resQueryPlan);
+                $id=$datos['idPlanes'];
+
+
+
+                  $querySelect = "SELECT * FROM Planes WHERE idPlanes = $id" ;
+
+               //ejecutamos el query
+               $resQuery = mysqli_query($connLocalhost, $querySelect) or trigger_error("Algun dato es incorrecto"); ?>
+            
+               <table  class="table table-striped  ">
+                
+                    <thead>
+                                    
+                                    
+                                        
+                        <th  scope="col">Fecha</th>
+                        <th  scope="col">Nombre</th>
+                        <th  scope="col">Plan</th>
+                    
+                       
+                    </thead>
              
              
-            // while ($fila = mysqli_fetch_array($resQueryPlan, MYSQLI_BOTH)) {?>
+               <?php  while ($fila = mysqli_fetch_array($resQuery, MYSQLI_BOTH)) {?>
+                          
+                         
+                          
                           <tr>
 
                             
-                            <td><?php //echo $fila['fecha']?></td>
-                            <td><?php //echo  $fila['descripcion']?></td>
-                            <td><?php //echo $fila['media']?></td>
-                            <td><?php //echo $fila['media2']?></td>
+                            <td><?php echo $fila['fecha']?></td>
+                            <td><?php echo  $fila['nombre']?></td>
+                            <td><a  class="btn btn-primary" target="_black" href="<?php  echo 'http://'.$_SERVER['HTTP_HOST'].'/Bestrong/archivos/'.$fila['nombre'] ?>"> Ver Plan</a></td>
                         
 
                             </tr>
 
                 
-             <?php // }}?>
+             <?php  }}?>
+
+                </table>
                             <br>
                             <br>
                     

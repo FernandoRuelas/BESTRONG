@@ -45,7 +45,8 @@ success:function(response){
     $('#horaEntreno').val(response.horaEntreno);
     $('#situacionGym').val(response.situacionGym);
     $('#idVerFotos').val(response.idUsuario);
-    $('#nombre').val(response.nombre)
+    $('#nombre').val(response.nombre);
+    $('#id').val(response.idUsuario)
     
     //$('#imagen1').html("<img src=\""+ dataimage/jpeg, base64,base64_encode(response.imagen1) +"\" />");
     //document.getElementById()

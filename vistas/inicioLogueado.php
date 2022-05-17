@@ -37,7 +37,56 @@ $navegacion->NavegacionUsuarioLogeado();
      <div class="m-0 row justify-content-center">
 
         <div class="col-9 text-center" style="background-color: #e3f2fd;">
-            Aqui aparecera lo que publique el administrador como horarios, faltas, progresos,fotos, ventas, promociones,etc.
+        <div>
+        <div>
+                        <?php 
+                        include("coneccion/db_bestrong.php");
+                         $queryP= "SELECT * FROM Post" ;
+
+                         //ejecutamos el query
+                         $resQueryP = mysqli_query($connLocalhost, $queryP) or trigger_error("Algun dato es incorrecto");
+
+                        ?>
+                       
+                            <div class=" container-center">
+                                <div class="col-10 text-center">
+
+                            <?php 
+                          while ($fila = mysqli_fetch_array($resQueryP, MYSQLI_BOTH)) {
+
+                            $id=$fila['idUsuarioPost'];
+                            $queryU= "SELECT * FROM Usuario WHERE idUsuario = $id" ;
+
+                            //ejecutamos el query
+                            $resQueryU = mysqli_query($connLocalhost, $queryU) or trigger_error("Algun dato es incorrecto");
+                            $datosUsuario= mysqli_fetch_assoc($resQueryU); ?>
+
+                           
+                                <div class="col-12 text-center">
+                        
+                                    <h4 style="color: blue;"> <?php  echo $datosUsuario['nombre'];?></h4>
+                                    <p><?php echo $fila['descripcionPost'];?></p>
+                                     <img width="350px" height="350px" src="data:image/jpg;base64,<?php echo base64_encode($fila['archivo']);?>">
+                                    <p><?php echo $fila["fechaPost"];?> </p>
+                                </div>
+                           
+    
+                         <?php }?> 
+                                              
+                        
+                      
+
+
+                    </div>
+                           
+    
+                       
+                                              
+                        
+                      
+
+
+                    </div>
 
 
         </div>

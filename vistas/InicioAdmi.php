@@ -71,7 +71,7 @@
 
 
 
-                <div class="col-5">
+                
 
                     <div>
                         <?php 
@@ -81,22 +81,30 @@
                          //ejecutamos el query
                          $resQueryP = mysqli_query($connLocalhost, $queryP) or trigger_error("Algun dato es incorrecto");
 
-        
+                        ?>
                        
+                            <div class=" container-center">
+                                <div class="col-10 text-center">
+
+                            <?php 
                           while ($fila = mysqli_fetch_array($resQueryP, MYSQLI_BOTH)) {
 
-                            $id=$fila['idUsuario'];
+                            $id=$fila['idUsuarioPost'];
                             $queryU= "SELECT * FROM Usuario WHERE idUsuario = $id" ;
 
                             //ejecutamos el query
                             $resQueryU = mysqli_query($connLocalhost, $queryU) or trigger_error("Algun dato es incorrecto");
-                            $datosUsuario= mysqli_fetch_assoc($resQueryU);
+                            $datosUsuario= mysqli_fetch_assoc($resQueryU); ?>
 
-
+                           
+                                <div class="col-12 text-center">
                         
-                            echo $datos['nombre']; echo $fila["fecha"];   ?>
-                            < src="data:image/jpg;base64,<?php echo base64_encode($fila['imagen']);?>">
-
+                                    <h4 style="color: blue;"> <?php  echo $datosUsuario['nombre'];?></h4>
+                                    <p><?php echo $fila['descripcionPost'];?></p>
+                                     <img width="350px" height="350px" src="data:image/jpg;base64,<?php echo base64_encode($fila['archivo']);?>">
+                                    <p><?php echo $fila["fechaPost"];?> </p>
+                                </div>
+                           
     
                          <?php }?> 
                                               
@@ -108,7 +116,6 @@
 
                         
 
-                </div>
 
 
             </div>

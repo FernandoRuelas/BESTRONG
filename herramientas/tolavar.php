@@ -276,11 +276,11 @@ class tolvarNav{
               <ul class="nav justify-content-end">
               <?php if($_GET["accion"]=="salir"):?>
               <li class="nav-item">
-                <a class="nav-link active" href="index.php?accion=salir">Salir</a>
+                <a class="nav-link active" href="index.php?accion=Salir">Salir</a>
               </li>
               <?php else:?>
                 <li class="nav-item">
-                <a class="nav-link" href="index.php?accion=salir">Salir</a>
+                <a class="nav-link" href="index.php?accion=Salir">Salir</a>
                 </li>
               <?php endif?>
               </ul>
@@ -297,7 +297,7 @@ class tolvarNav{
         <a class="nav-link active" href="index.php?accion=perfilAdmi">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="index.php?accion=salir">Salir</a>
+        <a class="nav-link active" href="index.php?accion=Salir">Salir</a>
       </li>
       
       <div class="d-flex">

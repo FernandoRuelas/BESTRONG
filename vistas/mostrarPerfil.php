@@ -43,7 +43,7 @@
             <br>
             <br>
 
-            <h1 class="fs-2" style="color:#0000ff;"><?php if (isset($_POST['idVerFotos'])) {echo $nombre1;} ?></h1>
+            <h1 class="fs-2" style="color:#0000ff;"><?php if (isset($_POST['verFotos'])) {echo $nombre1;} ?></h1>
              
         </div>
 

@@ -215,15 +215,15 @@ class modales{
                               
                               
                         
-                              <label for="text">Cliente: </label>  <input id="idVerFotos" name="verFotos" readonly disabled type="text"   > <input id="nombre" disabled type="text" readonly>
+                              <label for="text">Cliente: </label>  <input id="idVerFotos" name="verFotos" readonly  type="text"   > <input id="nombre" disabled type="text" readonly>
                               
                             
                             
                               
-                              <input class="btn btn-lg btn-primary"  type="submit" value="Ver Fotos" name="VerFotos">
+                              <input class="btn btn-lg btn-primary"  type="submit" value="Ver Fotos" name="btnVerFotos">
 
                             
-                            </form>
+                   </form>
                   
 
                     
@@ -327,7 +327,38 @@ class modales{
                       <br>
                       <br>
                       <div>
-                          <br>
+                    <br>
+                    <br>
+
+                    <main class="form-signin">
+                        <div class="container col-3">
+                        <form action="index.php?accion=subirPlanControlador" method="POST" enctype="multipart/form-data">
+                         
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="id" name="idUsuerPlan"  readonly>
+                            <label for="floatingPassword">ID del usuario</label>
+                            </div>
+                          
+                            <div class="form-floating">
+                            <input type="text" class="form-control" id="titulo" name="tituloPdf" >
+                            <label for="floatingPassword">Titulo del pdf</label>
+                            </div>
+                      
+                            <input type="file" class="form-control" name="pdf" >
+                         
+                         
+
+                          
+                          <input class="btn btn-lg btn-primary"  type="submit" value="Subir Plan" name="subirPlan">
+                         
+                          <p class="mt-5 mb-3 text-muted">&copy; Bestrong</p>
+
+                        </form>
+                        </div>
+                      </main>
+                                        
+
+                                  
 
 
 

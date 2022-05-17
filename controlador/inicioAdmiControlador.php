@@ -29,7 +29,7 @@ if (isset($_POST['publicar'])) {
       mysqli_query($connLocalhost, $querySubir) or trigger_error("La inserción del registro del usuario ha fallado");
 
       //Readireccionamos a la ventana para iniciar secion.
-      header("location: ../index.php?accion=inicioAdmi");
+      header("location: index.php?accion=inicioAdmi");
 
 
 }
