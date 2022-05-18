@@ -30,10 +30,12 @@ if (isset($_POST['EnviarFormulario'])) {
         // Ejecutamos el query
           $resQuerySelectId = mysqli_query($connLocalhost, $querySelectId) or trigger_error("Algun dato es incorrecto");
           
-        if ($resQuerySelectId) {
-              //obtenemos el id
-           $idFormulario= mysqli_fetch_assoc($resQuerySelectId);
-           $a=$idFormulario['idFo'];
+          $idFormulario= mysqli_fetch_assoc($resQuerySelectId);
+           
+
+        if (isset($idFormulario['idFo'])) {
+            
+            $a=$idFormulario['idFo'];
 
            $querySelectFecha = "SELECT fecha FROM Formularios WHERE idFormularios = $a" ;
 
@@ -237,7 +239,7 @@ if (isset($_POST['EnviarFormulario'])) {
         echo '
         <script>
         alert("Debe llenar todos los campos");
-        window.location= "index.php?accion=Formulario";
+        window.location= "index.php?accion=PerfilUsuario";
     
         </script>
         

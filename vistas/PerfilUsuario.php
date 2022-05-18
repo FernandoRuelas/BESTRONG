@@ -69,32 +69,30 @@
         <div class="col-5">
 
             <h1>Plan del mes</h1> 
-            <input type="submit" name="obtenerPlan" class="btn btn-block btn-secondary" value="Actualizar" src="index.php?=PerfilUsuario">
+            <form action="index.php?accion=PerfilUsuario" method="post">
+            <input type="submit" class="btn btn-block btn-secondary" value="Actualizar" >
+            </form>
             <br>
+            
 
             <?php 
               include("coneccion/db_bestrong.php");
             $a=$_SESSION["userId"];
                //hacemos consulta para obtener la fecha
-               $querySelectPlan = "SELECT MAX(idPlanes) AS idPlanes FROM Planes WHERE idUsuarios = $a" ;
+               $querySelectPlan = "SELECT MAX(idPlanes) AS idPlan FROM Planes WHERE idUsuarios = $a" ;
 
                //ejecutamos el query
                $resQueryPlan = mysqli_query($connLocalhost, $querySelectPlan) or trigger_error("Algun dato es incorrecto");
 
-
+                  
+               $datos= mysqli_fetch_assoc($resQueryPlan);
+              
             
             ?>
              <?php 
 
              
-             if (empty($resQueryPlan)) {
-                 echo "Su plan aun no esta disponible";
-             }else {
-
-                $datos= mysqli_fetch_assoc($resQueryPlan);
-                $id=$datos['idPlanes'];
-
-
+             if ($id=$datos['idPlan'] != null) {
 
                   $querySelect = "SELECT * FROM Planes WHERE idPlanes = $id" ;
 
@@ -128,9 +126,12 @@
                         
 
                             </tr>
+                            <?php
+             }}else {
 
+                echo "Su plan aun no esta disponible";
                 
-             <?php  }}?>
+             }?>
 
                 </table>
                             <br>
@@ -152,9 +153,7 @@
     $id=$_SESSION['userId'];
 
     ?>
-    <br>
-    <br>
-    <br>
+   
 
     
 

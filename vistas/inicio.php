@@ -52,7 +52,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Somos un grupo de entrenadores capasitados y con mucha experiencia.</h5>
         <p >Te ayudaremos a conoser tu mejejor vercion.</p>
-        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Entrar">Conosenos</a></p>
+        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Nosotros">Conosenos</a></p>
       </div>
 
         </div>
@@ -110,7 +110,7 @@
 
         <div class="row">
  
-            <div class="col"><p class="fs-3" style="color:#38A0FC;"> Bienvenido a BeStrongProyect Somos un equipo de personal capasitado en el ambito del fittnes</p></div>
+            <div class="col-9"><p class="fs-3" style="color:#38A0FC;"> Bienvenido a BeStrongProyect Somos un equipo de personal capasitado en el ambito del fittnes</p></div>
 
         </div>
     </div>
@@ -118,20 +118,75 @@
     <div class="container">
 
         <div class="row">
-            <div class="col " >
-                <p class="fs-2" style="color:#0000ff;"> Nuestro Objetivo</p>
-                <p class="fs-3" style="color:#38A0FC;"> Nuestro objetivo es poder ayudarte a construir el fisico que deseas, ayudandote con la mejor atencion, adaptando un plan a tus nesesidades y tu comodidad.</p>
-               
-                
-
+        <div class="col-9">
+            <p class="fs-2" style="color:#0000ff;"> Perfil</p>
+            <p class="fs-3" style="color:#38A0FC;"> Aqui podras ver tus fotos de cada mes a si como podras enviar tu formulario de cada mes y ver el plan que tu entrenador enviara.</p>
             </div>
-            
-            <div 
-            class="col"><p class="fs-2" style="color:#0000ff;"> Vision</p>
-            <p class="fs-3" style="color:#38A0FC;"> Encontrar personas con la disiplina y el caracter para poder realizar su plan al 100% y obtener su mejor vercion asi poder capasitar a esta persona y que sea parte del Proyecto BeStrong, asi crecer juntos.</p>
-            </div>
+        
+        
 
         </div>
+        <div class="row">
+        
+                
+                <img width="800px" height="450px" src="imagenes/perfil.jpeg">
+    
+    
+
+        </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+      <div class="col-9">
+          <p class="fs-2" style="color:#0000ff;"> Inicio</p>
+          <p class="fs-3" style="color:#38A0FC;"> Aqui podras ver las publicaciones que haga el administrador.</p>
+          </div>
+
+
+
+      </div>
+      <div class="row">
+
+              
+              <img width="800px" height="450px" src="imagenes/inicio.jpeg">
+
+
+
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+      <div class="col-9">
+          <p class="fs-2" style="color:#0000ff;"> Formulario</p>
+          <p class="fs-3" style="color:#38A0FC;"> Podras enviar un formulario cada mes.</p>
+          </div>
+
+
+
+      </div>
+      <div class="row">
+
+              
+              <img width="800px" height="450px" src="imagenes/Formulario.jpeg">
+
+
+
+      </div>
+      <br>
+      <br>
+
+      <div class="row">
+
+              
+        <img width="800px" height="450px" src="imagenes/Formulario1.jpeg">
+
+
+
+      </div>
     </div>
    
    

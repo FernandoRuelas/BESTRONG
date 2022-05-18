@@ -75,7 +75,7 @@
 
                  if (empty($a)) {
                    
-                  header("location: index.php?accion=Formulario");
+                  header("location: index.php?accion=PerfilUsuario");
                  }
                
                 //hacemos consulta para obtener la fecha
@@ -114,7 +114,7 @@
 
                 if ($fechaPago == null ||$fechaPago == "0000-00-00" ) {
                                   
-                  header("location: index.php?accion=Formulario");
+                  header("location: index.php?accion=PerfilUsuario");
                 }
                 else {
                   //verificamos la diferencia eentre los pagos

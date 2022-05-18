@@ -26,70 +26,7 @@
 
     <!--*******************
     ****carrusel cabezera***
-    **********************-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="imagenes/BESTRONG.jpeg" class="d-block w-100" alt="..." width="500" height="500">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Nosotros te ayudamos a conseguir tu mejor vercion. Tu cambio nos interesa</h5>
-        <p>Se parte del equipo</p>
-        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Registrate">Registrate hoy</a></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-4">
-        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
-
-        </div>
-
-        <div class="col-4">
-        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
-
-        </div>
-        <div class="col-3">
-        <img src="imagenes/Conosenos.jpeg" class="d-block w-80" alt="..." width="500" height="500">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Somos un grupo de entrenadores capasitados y con mucha experiencia.</h5>
-        <p >Te ayudaremos a conoser tu mejejor vercion.</p>
-        
-      </div>
-
-        </div>
-
-      </div>
-      
-    
-    </div>
-
-    <div class="carousel-item ">
-      <img src="imagenes/entrar.PNG" class="d-block w-100" alt="..." width="500" height="500">
-      <div class="carousel-caption d-none d-md-block">
-        <br>
-        <h5 style="color: black;">Disfruta de grandes beneficios</h5>
-        <p style="color: black;">Realiza tu pago en linea y goza de todos los servicios que tenemos para ti</p>
-        <p><a class="btn btn-lg btn-primary" href="index.php?accion=Entrar">IniciarSesion</a></p>
-      </div>
-    </div>
-    
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-        
+  
 
 
     <!--*******************
@@ -306,6 +243,27 @@
                 </div>
             </div>
             </div>
+
+
+
+            <div class="container">
+
+<div class="row">
+    <div class="col " >
+        <p class="fs-2" style="color:#0000ff;"> Nuestro Objetivo</p>
+        <p class="fs-3" style="color:#38A0FC;"> Nuestro objetivo es poder ayudarte a construir el fisico que deseas, ayudandote con la mejor atencion, adaptando un plan a tus nesesidades y tu comodidad.</p>
+       
+        
+
+    </div>
+    
+    <div 
+    class="col"><p class="fs-2" style="color:#0000ff;"> Vision</p>
+    <p class="fs-3" style="color:#38A0FC;"> Encontrar personas con la disiplina y el caracter para poder realizar su plan al 100% y obtener su mejor vercion asi poder capasitar a esta persona y que sea parte del Proyecto BeStrong, asi crecer juntos.</p>
+    </div>
+
+</div>
+</div>
             <br>
             <br>
             <br>
